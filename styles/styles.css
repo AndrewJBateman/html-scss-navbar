@@ -1,0 +1,134 @@
+@import "https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Besley", serif;
+  outline: none;
+  transition: 0.2s linear all;
+  text-decoration: none;
+}
+*::-moz-selection {
+  background: #bc3d0f;
+  color: #57710b;
+}
+*::selection {
+  background: #bc3d0f;
+  color: #57710b;
+}
+
+:root {
+  --box_shadow: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.btn {
+  display: inline-block;
+  background: #bc3d0f;
+  color: #ede9d0;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  padding: 0.8rem 3rem;
+}
+.btn:hover {
+  letter-spacing: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bc3d0f;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+header {
+  position: fixed;
+  background: #57710b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+header .logo img {
+  height: 6rem;
+}
+header .navbar a {
+  color: #ede9d0;
+  font-size: 1.6rem;
+  padding: 0.5rem 0.9rem;
+  margin: 0 1rem;
+  border-radius: 0.5rem;
+}
+header .navbar a:hover {
+  background: #bc3d0f;
+  color: #ede9d0;
+}
+header .navbar a.active {
+  background: #bc3d0f;
+  color: #ede9d0;
+}
+header .icons div {
+  color: #bc3d0f;
+  cursor: pointer;
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+header .icons div:hover {
+  color: #ede9d0;
+}
+
+#MenuBtn {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  #MenuBtn {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #57710b;
+    width: 15rem;
+    height: calc(100vh - 9.5rem);
+  }
+  header .navbar a {
+    display: block;
+    margin: 1.5rem;
+    font-size: 2rem;
+    color: #ede9d0;
+    padding: 0.5rem;
+  }
+  header .navbar.active {
+    right: 0;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}/*# sourceMappingURL=styles.css.map */
