@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family_1;
+  outline: none;
+  // border: none;
+  transition: 0.2s linear all;
+  text-decoration: none;
+  &::selection {
+    background: $clr_secondary;
+    color: $clr_primary;
+  }
+}
+:root {
+  --box_shadow: none;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+section {
+  padding: 2rem 7%;
+}
+.btn {
+  display: inline-block;
+  background: $clr_secondary;
+  color: $clr_tertiary;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  padding: 0.8rem 3rem;
+  &:hover {
+    letter-spacing: 0.2rem;
+  }
+}

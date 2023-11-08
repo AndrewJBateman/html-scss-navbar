@@ -1,57 +1,13 @@
 @import "variables";
+@import "global";
+@import "scrollbar";
 @import "media-queries";
 
 @import "https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: $font-family_1;
-  outline: none;
-  // border: none;
-  transition: 0.2s linear all;
-  text-decoration: none;
-  &::selection {
-    background: $color_2;
-    color: $color_1;
-  }
-}
-:root {
-  --box_shadow: none;
-}
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-padding-top: 9rem;
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-}
-section {
-  padding: 2rem 7%;
-}
-.btn {
-  display: inline-block;
-  background: $color_2;
-  color: $color_3;
-  margin-top: 1rem;
-  font-size: 1.7rem;
-  padding: 0.8rem 3rem;
-  &:hover {
-    letter-spacing: 0.2rem;
-  }
-}
-::-webkit-scrollbar-thumb {
-  background: $color_2;
-}
-::-webkit-scrollbar-track {
-  background: #000;
-}
 header {
   position: fixed;
-  background: $color_1;
+  background: $clr_primary;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,29 +23,29 @@ header {
   }
   .navbar {
     a {
-      color: $color_3;
+      color: $clr_tertiary;
       font-size: 1.6rem;
       padding: 0.5rem 0.9rem;
       margin: 0 1rem;
       border-radius: 0.5rem;
       &:hover {
-        background: $color_2;
-        color: $color_3;
+        background: $clr_secondary;
+        color: $clr_tertiary;
       }
     }
     a.active {
-      background: $color_2;
-      color: $color_3;
+      background: $clr_secondary;
+      color: $clr_tertiary;
     }
   }
   .icons {
     div {
-      color: $color_2;
+      color: $clr_secondary;
       cursor: pointer;
       margin-left: 2rem;
       font-size: 2.5rem;
       &:hover {
-        color: $color_3;
+        color: $clr_tertiary;
       }
     }
   }
@@ -98,13 +54,13 @@ header {
   display: none;
 }
 
-@include laptop {
+@include tablet {
   html {
     font-size: 55%;
   }
 }
 
-@include tablet {
+@include mobile-landscape {
   #MenuBtn {
     display: initial;
   }
@@ -113,14 +69,14 @@ header {
       position: absolute;
       top: 100%;
       right: -100%;
-      background: $color_1;
+      background: $clr_primary;
       width: 15rem;
       height: calc(100vh - 9.5rem);
       a {
         display: block;
         margin: 1.5rem;
         font-size: 2rem;
-        color: $color_3;
+        color: $clr_tertiary;
         padding: 0.5rem;
       }
     }
